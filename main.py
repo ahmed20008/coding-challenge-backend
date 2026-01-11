@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+# from database import engine
+# from sqlalchemy import text
 
 app = FastAPI(
     title="Application Review API",
@@ -21,3 +23,12 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+# @app.get("/connection-status")
+# def health():
+#     try:
+#         with engine.connect() as conn:
+#            conn.execute(text("SELECT 1"))
+#         return {"status": "Success", "db": "Database connected successfully"}
+#     except Exception as e:
+#         return {"status": "error", "db": "not connected", "error": str(e)}

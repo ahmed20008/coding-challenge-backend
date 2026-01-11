@@ -10,4 +10,4 @@ venv/
 *.pdf
 pdfs/
 temp_images/
-alembic/
+alembic/versions/__pycache__/
