@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from api import router as applications_router
 # from database import engine
 # from sqlalchemy import text
 
@@ -15,6 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(applications_router)
 
 @app.get("/")
 def root():
@@ -22,8 +24,9 @@ def root():
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "Ok"}
 
+# Route to check the database connection
 # @app.get("/connection-status")
 # def health():
 #     try:
