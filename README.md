@@ -2,12 +2,12 @@
 
 A simple REST API to manage job applications, store project history, and generate PDF summaries.
 
-## 🚀 Quick Start
+## Quick Start
 
 1.  **Configure Environment**
     Add a GitHub token if you want to send multiple requests to the server (helps avoid rate limits).
     ```bash
-    export GITHUB_TOKEN=your_github_token
+    GITHUB_TOKEN=your_github_token
     ```
 
 2.  **Run with Docker**
