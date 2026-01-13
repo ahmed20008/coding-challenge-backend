@@ -13,7 +13,8 @@ A simple REST API to manage job applications, store project history, and generat
 2.  **Run with Docker**
     Build and start the services (database migrations run automatically).
     ```bash
-    docker-compose up --build
+    docker-compose build
+    docker-compose up
     ```
 
 3.  **Access API**
